@@ -1,0 +1,91 @@
+<mat-tab-group>
+  <mat-tab label="Adicionar Drone">
+    <form
+      [formGroup]="cadastrarDrone"
+      (ngSubmit)="onSubmit()"
+      class="example-container"
+    >
+      <mat-form-field class="input" appearance="legacy">
+        <mat-label>ID</mat-label>
+        <input
+          minlength="1"
+          maxlength="10"
+          formControlName="id_drone"
+          matInput
+          placeholder="Insira o id do drone"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="input" appearance="legacy">
+        <mat-label>Latitude</mat-label>
+        <input
+          type="number"
+          min="-90"
+          max="90"
+          formControlName="latitude"
+          matInput
+          placeholder="Insira a latitude"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="input" appearance="legacy">
+        <mat-label>Longitude</mat-label>
+        <input
+          type="number"
+          min="-180"
+          max="180"
+          formControlName="longitude"
+          matInput
+          placeholder="Insira a longitude"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="input" appearance="legacy">
+        <mat-label>Temperatura</mat-label>
+        <input
+          type="number"
+          min="-25"
+          max="40"
+          formControlName="temperatura"
+          matInput
+          placeholder="Insira a temperatura"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="input" appearance="legacy">
+        <mat-label>Umidade</mat-label>
+        <input
+          type="number"
+          min="0"
+          max="100"
+          formControlName="umidade"
+          matInput
+          placeholder="Insira a umidade"
+          required
+        />
+      </mat-form-field>
+      <button
+        [disabled]="!cadastrarDrone.valid"
+        mat-raised-button
+        color="primary"
+      >
+        Salvar
+      </button>
+    </form>
+    <mat-list>
+      <mat-list-item *ngFor="let drone of listaDrones">
+        Drone ID: {{ drone.id_drone }} - Temperatura: {{ drone.temperatura }} e
+        Umidade: {{ drone.umidade }} - Latitude: {{ drone.latitude }} e Longitude {{ drone.longitude }}
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
+  <mat-tab label="Visualizar Drones">
+    <mat-list>
+      <mat-list-item *ngFor="let drone of listaDrones">
+        <mat-slide-toggle (click)="rastrear(drone)" [(ngModel)]="drone.rastreando">  Drone ID: {{ drone.id_drone }} - Temperatura: {{ drone.temperatura }} e
+          Umidade: {{ drone.umidade }} - Latitude: {{ drone.latitude }} e Longitude {{ drone.longitude }}</mat-slide-toggle>
+      </mat-list-item>
+    </mat-list>
+    <div #mapContainer id="map"></div>
+  </mat-tab>
+</mat-tab-group>
