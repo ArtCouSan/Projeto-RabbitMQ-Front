@@ -39,7 +39,7 @@ export class DroneComponent implements OnInit, AfterViewInit {
 
 
   // API
-  private urlAPI = 'http://localhost:8080/v1/drone';
+  private urlAPI = 'http://localhost:8081/v1/drone';
   private topic = '/topic/drones';
   private stompClient: any;
 
