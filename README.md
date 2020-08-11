@@ -1,6 +1,5 @@
 # Projeto-RabbitMQ-Front
 
-Angular
 
 # Necessario
 
@@ -11,11 +10,15 @@ Angular
 
 - http://localhost:4200
 
-# Passo a passo - Setup
+# Passo a passo - Setup - rodar local
 
 - Clone o projeto
 
-- Abrir o projeto na pasta projeto-drone-front e executar o npm install, após isso, npm start
+- Colocar sua chave de registro para API google no index e no app.module
+
+- 1ª opção:  Abrir o projeto na pasta projeto-drone-front e executar o npm install, após isso, npm start
+- 2ª opção:  Ir no diretorio projeto-drone-front e executar o docker-compose up -d
+
 
 
 # Autor
