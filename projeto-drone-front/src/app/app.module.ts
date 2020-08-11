@@ -34,7 +34,7 @@ import { AgmCoreModule } from '@agm/core';
     BrowserAnimationsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBV8HI0FfMpW6_gRrTHQZ6BL5dWsWR00y0'
+      apiKey: '<SUA_CHAVE>'
     })
   ],
   providers: [],
