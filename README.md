@@ -15,7 +15,7 @@ Angular
 
 - Clone o projeto
 
-## 1 - Abrir o projeto na pasta projeto-drone-front e executar o npm install, após isso, npm start
+- Abrir o projeto na pasta projeto-drone-front e executar o npm install, após isso, npm start
 
 
 # Autor
